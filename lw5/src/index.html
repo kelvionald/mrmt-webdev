@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TODO->SMART</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endinject -->
+  </head>
+  <body>
+    <div class="todo">
+      <div class="space"></div>
+      <header>
+        <big>TODO->SMART</big>
+      </header>
+      <form class="todo_container">
+        <div class="form-group left_col">
+          <label>Введите заметку:</label>
+          <input type="text" class="form-control input_note">
+        </div>
+        <div class="dropdown right_col">
+          <button class="btn btn-secondary dropdown-toggle selector_priority" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="circle_grey"></div>
+          </button>
+          <div class="dropdown-menu list_priority" aria-labelledby="dropdownMenuButton">
+            <div class="circle_red" priority="high"><span class="desktop_label">Важная</span></div>
+            <div class="circle_yellow" priority="middle"><span class="desktop_label">Средняя</span></div>
+            <div class="circle_green" priority="low"><span class="desktop_label">Не важная</span></div>
+          </div>
+          <input type="submit" class="btn btn-primary todo_submit" value="Сохранить">
+        </div>
+        <div class="alert alert-warning alert_select_priority" role="alert">
+          <strong>Внимание!</strong> <div class="msg"></div>
+        </div>
+        <div class="note_elements"></div>
+        <div class="sort_bar">
+          Первыми:
+          <span class="circle_red" priority="high"></span>
+          <span class="circle_yellow" priority="middle"></span>
+          <span class="circle_green" priority="low"></span>
+          по статусу:
+          <span class="complete btn btn-default btn-sm is_complete">&#10003;</span>
+          <span class="notComplete btn btn-default btn-sm is_complete green">&#10003;</span>
+        </div>
+      </form>
+      <footer>
+        GOTO SMART &copy;
+      </footer>
+    </div>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script type="text/template" id="note_template">
+      <div class="note_element" index="<%=index%>">
+        <span class="<%=className%> small_circle"></span>
+        <span class="btn btn-default btn-sm is_complete <%=addStyle%>">
+          &#10003;
+        </span>
+        <span class="btn btn-danger btn-sm delete_note">&times;</span>
+        <span>#<%=index%> <%=content%></span>
+      </div>
+      <hr>
+    </script>
+    <!-- inject:js -->
+    <script src="js/main.js"></script>
+    <!-- endinject -->
+  </body>
+</html>

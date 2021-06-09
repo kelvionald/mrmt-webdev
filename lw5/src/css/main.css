@@ -1,0 +1,152 @@
+.todo{
+  width: 480px;
+  margin: auto;
+}
+
+.todo_container, footer, header{
+  border-radius: 4px;
+  border: rgb(165, 157, 157) 1px solid;
+  padding: 4px 5px;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  margin-bottom: 60px;
+}
+
+header{
+  color: rgba(0,0,0,0.6);
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                   0px -5px 35px rgba(255,255,255,0.3);
+  text-align: center;
+  font-size: 120%;
+}
+
+body {
+  font-size: 130%;
+}
+
+.circle_red, .circle_yellow, .circle_green, .circle_grey {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  
+  top: 4px;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.circle_grey {
+  background: #cacaca;
+}
+
+.circle_green {
+  background: #0ff53a;
+}
+
+.circle_yellow {
+  background: #ffe605;
+}
+
+.circle_red {
+  background: #ff0000;
+}
+
+.left_col, .right_col {
+  display: inline-block;
+}
+
+.left_col{
+  width: 67%;
+}
+
+.right_col {
+  float: right;
+  margin-top: 37px;
+}
+
+.list_priority {
+  min-width: 0;
+  width: 48px;
+}
+
+.dropdown-item{
+  padding: 0.2em 0.7em;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.list_priority > div {
+  padding: 1em 1em;
+  margin: 0.4em;
+}
+
+.note_element{
+  position: relative;
+}
+
+span{
+  display: inline-block;
+}
+
+.is_complete {
+  background-color: grey;
+}
+
+.green {
+  background-color: rgb(3, 156, 10);
+}
+
+.desktop_label {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .desktop_label {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    top: -16px;
+    width: 80px;
+  }
+
+  .list_priority{
+    width: 150px;
+  }
+
+  .list_priority > .circle_red, .list_priority > .circle_yellow, 
+  .list_priority > .circle_green, .list_priority > .circle_grey{
+    display: block;
+  }
+
+  .space{
+    height: 76px;
+  }
+}
+
+.small_circle {
+  width: 15px;
+  height: 15px;
+  position: unset;
+  cursor: default;
+}
+
+.alert {
+  display: none;
+}
+
+.selector_priority{
+  padding: 3px 6px;
+}
+
+.delete_note{
+  float: right;
+}
+
+.btn {
+  cursor: pointer;
+}
